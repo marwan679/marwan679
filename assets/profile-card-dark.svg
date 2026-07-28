@@ -122,13 +122,6 @@
       .skill-anim-2 { animation-delay: 0.12s; }
       .skill-anim-3 { animation-delay: 0.24s; }
 
-      @keyframes cardIntro {
-        from { opacity: 0.4; transform: translateY(6px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      svg > g, svg > rect.bg {
-        animation: cardIntro 0.5s ease-out;
-      }
     </style>
 
     <!-- Radar Line Gradient -->
