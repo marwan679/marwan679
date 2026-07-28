@@ -30,6 +30,17 @@
         font-size: 10.5px;
       }
 
+      @keyframes asciiFlicker {
+        0%, 100% { opacity: 1; }
+        45% { opacity: 0.82; }
+        50% { opacity: 1; }
+        78% { opacity: 0.9; }
+      }
+      .ascii-text {
+        animation: asciiFlicker 3.2s ease-in-out infinite;
+      }
+
+
       /* Portrait Label Underneath Image */
       .portrait-label-bg {
         fill: #161b22;
@@ -95,12 +106,29 @@
         stroke: #30363d;
         stroke-width: 1;      }
 
-      /* Slide-In Animation for Nested Skill Groups */
-      @keyframes slideIn {
-        from { opacity: 0; transform: translateX(25px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
 
+      /* Skill Group Entrance (transform-only: content stays visible even
+         if this animation doesn't run in a given renderer) */
+      @keyframes slideIn {
+        from { transform: translateX(24px); }
+        to   { transform: translateX(0); }
+      }
+      .skill-anim-1, .skill-anim-2, .skill-anim-3 {
+        animation-name: slideIn;
+        animation-duration: 0.55s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+      .skill-anim-2 { animation-delay: 0.12s; }
+      .skill-anim-3 { animation-delay: 0.24s; }
+
+      @keyframes cardIntro {
+        from { opacity: 0.4; transform: translateY(6px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      svg > g, svg > rect.bg {
+        animation: cardIntro 0.5s ease-out;
+      }
     </style>
 
     <!-- Radar Line Gradient -->
