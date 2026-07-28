@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
+
+      .bg { fill: #ffffff; }
+      
+      text {
+        font-family: 'Fira Code', monospace, Consolas, 'Courier New';
+        font-size: 11px;
+        white-space: pre;
+      }
+
+      /* Animated Glowing Outer Border for Light Mode */
+      .cyber-border {
+        fill: none;
+        stroke: #0969da;
+        stroke-width: 1.5;        animation: borderPulse 4s infinite alternate ease-in-out;
+      }
+
+      @keyframes borderPulse {
+        0% { stroke: #0969da; filter: drop-shadow(0 0 2px rgba(9,105,218,0.2)); }
+        50% { stroke: #8250df; filter: drop-shadow(0 0 6px rgba(130,80,223,0.3)); }
+        100% { stroke: #1a7f37; filter: drop-shadow(0 0 4px rgba(26,127,55,0.25)); }
+      }
+
+      /* ASCII Text Gradient Base */
+      .ascii-text {
+        font-size: 10.5px;
+      }
+
+      /* Portrait Label Underneath Image */
+      .portrait-label-bg {
+        fill: #f6f8fa;
+        stroke: #d0d7de;
+        stroke-width: 1;      }
+
+      .portrait-label-text {
+        fill: #0969da;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-anchor: middle;
+      }
+
+      /* Radar Scan Line Effect */
+      @keyframes scanline {
+        0% { transform: translateY(0px); opacity: 0; }
+        15% { opacity: 0.85; }
+        85% { opacity: 0.85; }
+        100% { transform: translateY(300px); opacity: 0; }
+      }
+
+      .radar-sweep {
+        width: 420px;
+        height: 2px;
+        fill: url(#radarGrad);
+        animation: scanline 3.5s infinite linear;
+        animation-delay: 1.2s;
+      }
+
+      /* Terminal UI &amp; Text Styles */
+      .prompt { fill: #1a7f37; font-weight: 700; }
+      .path { fill: #0969da; font-weight: 700; }
+      .cmd { fill: #bc4c00; font-weight: 500; }
+      
+      .glitch-title {
+        fill: #1f2328;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        filter: drop-shadow(0 0 4px rgba(31, 35, 40, 0.15));
+      }
+
+      .subtitle { fill: #636c76; font-size: 12px; }
+
+      /* Glowing Cursor */
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor {
+        fill: #0969da;
+        animation: blink 0.9s infinite;
+      }
+
+      /* Skill Badge Styles */
+      .cat-title { fill: #8250df; font-size: 12px; font-weight: 700; }
+      .skill-tag { fill: #1f2328; font-size: 11px; }
+      .skill-bullet { fill: #cf222e; font-weight: bold; }
+      
+      .badge-bg {
+        fill: #f6f8fa;
+        stroke: #d0d7de;
+        stroke-width: 1;      }
+
+      /* Slide-In Animation for Skill Groups */
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(25px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+    </style>
+
+    <!-- Radar Line Gradient (Light Mode Palette) -->
+    <linearGradient id="radarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0969da" stop-opacity="0" />
+      <stop offset="50%" stop-color="#0969da" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#8250df" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- High-Contrast Gradient for ASCII Art -->
+    <linearGradient id="asciiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0969da" />
+      <stop offset="50%" stop-color="#116329" />
+      <stop offset="100%" stop-color="#8250df" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect class="bg" width="920" height="480" rx="12" />
+  
+  <!-- Cyber Animated Border -->
+  <rect class="cyber-border" width="918" height="478" x="1" y="1" rx="11" />
+
+  <!-- Terminal Window Control Bar -->
+  <g transform="translate(0,0)">
+    <circle cx="25" cy="22" r="5.5" fill="#ff5f56" />
+    <circle cx="43" cy="22" r="5.5" fill="#ffbd2e" />
+    <circle cx="61" cy="22" r="5.5" fill="#27c93f" />
+    <text x="85" y="26" fill="#636c76" font-size="11">system@marwan-gamal: ~/portfolio/skills</text>
+    <line x1="0" y1="40" x2="920" y2="40" stroke="#d0d7de" stroke-width="1" />
+  </g>
+
+  <!-- LEFT COLUMN: ASCII Art + Cyber Radar Effect + Label -->
+  <g transform="translate(20, 55)">
+    <!-- Radar Laser Sweep -->
+    <rect class="radar-sweep" x="-10" y="0" />
+
+    <!-- ASCII Character Stream -->
+    <g class="ascii-text" fill="url(#asciiGrad)">
+<text y="0">vvxrxvcnvnuXnnffrrf(\||(||t||\)\/(\/\/nnnnruuzfurxnzvxnvuYvcXzzYYcuX</text>
+<text y="8">vvcnXuvrznvnrrf/\n/f(/\(||({([)\)|/\//|rurvrrxxnrvvfrvrzxnXcvvzXuYxX</text>
+<text y="16">nnzxrxununf/fnff\/|(1)/)[{[([[{|}{((\(ftrzfnfnunvnxurnnxnYvvzvunnnuz</text>
+<text y="24">nvcrvrnufrfx/\|f\{({r{|mqhW%oqobk#8#Z/|{|/|trnurtnnnnuuruxvxUvcvnvcz</text>
+<text y="32">xnvu/ff/|/|x1)\)?(uWWw&amp;aWL8W*8W8&amp;&amp;&amp;*8a80\|txfntnnrfucnfunnufuvvvcvcz</text>
+<text y="40">vuruxr\t||\)){|Oou0XfmtvYJ8Ldk#Qk8&amp;ampWW8&amp;W&amp;#\|\trxnncfvxxcccuuvvnzzzzu</text>
+<text y="48">nruufff(|)){?[ZMJ0XUL&amp;M@pbB88&amp;&amp;&amp;bqhW&amp;&amp;&amp;8&amp;8%Zfxf/nxxx/unXnnuvnrvzrufU</text>
+<text y="56">fn\nnnu||(}_{ZQv#ah&amp;p%a*hZmO0Zpb*k#8&amp;888&amp;8%%X)tuntuxvunctnxYuucvuzzz</text>
+<text y="64">vxfx//\r\\({XbOzb88aLv{-&gt;!l&gt;&lt;i_?}(txumpM#%%%8(|t/fn\rnunncuuvcrJzvcz</text>
+<text y="72">cxxtnnf//)(}oBkObb(&lt;l&gt;;,:;!I!~&gt;?}(||{xCLqW&amp;88r1\tttntxrvxXvrczvvuvcu</text>
+<text y="80">xrxuvfr((t\|f%p8[~!l`:^&quot;^^:&gt;l~]]1)1()vJLd*M&amp;BO/\(tt/ffxvuufnzuvcunYu</text>
+<text y="88">xnufnttxtf\tx%o_+++i:IIIl&lt;,iii~&lt;[}1(\fJpdhoW&amp;%)/(\/xrrnunuuvcuXzXuzc</text>
+<text y="96">fuxutf|rurfut/q][&lt;_&gt;!l:lIl^`,![[tfvcufuZdkbpp*[|\(rrxnrurvnnvXczvvuz</text>
+<text y="104">nftnx\\txuuxxnm/{]?~I&quot;:;^!;;{npWBoXtYmZbpOqohk~|}/|t/vrvunrnzvznvxuu</text>
+<text y="112">rnrvcxfrnuf/ruwZ1-{\Lhbn(}^+X*%8OO1$8BmZZmwhoowX81(fxurnufxvuXncuuXx</text>
+<text y="120">zctfv\tnrxvzvuuZ1uwr~O&amp;8ozl^]kMCrvfJdUr|(zOqhkwqW{1\trnunvvvvuucucnx</text>
+<text y="128">rrxnruxfuununzcmr/|Ua@dcc_!`-qqv|?!!:&quot;~](Xwkqb8pb}/1/frnucrvnxvnxzzX</text>
+<text y="136">ur\frrvcruxnXcYvz}|1uC&gt;,:ll^I|qq/&lt;l,!!~[rLpbdo%W[)\||rnXcvzncuzvnvXz</text>
+<text y="144">nf/vrtc/unuxzu;,;}_,;;;^,il.'-ZLqt;;i~1fUZb*b#d8))|/rnunvYYunccYzvuu</text>
+<text y="152">fuxuvutrxnvttvu}r|i:&quot;,&quot;.^?%frbB%pr1-_?[UwpkppWwb)\rn/ruztncnXuznzrnz</text>
+<text y="160">vx/ffuvufnvuvncvY_|1ill;;&quot;&lt;r(-uJkUXq&amp;kcCwwbhk-})\\rtfzrfvXvcvruvvXXU</text>
+<text y="168">xtuffxxrunn\cuzJYJ-\t+~fvq&lt;)|-\uq&amp;B@YZZqawdka/)/frfuvnxzzzuvvxuvnXzU</text>
+<text y="176">ncunxxrutnrunrczcJZu|-+o&amp;ab&lt;^'.]zwwct1Jqmpbkot(||fnfnrxxfufnXvvucvYu</text>
+<text y="184">zfnruxnrvfrnxvuJYUUCf({]f!?|vpbhZx\1(nqwwkbobv}\\/\frnxnzuzzcnucvznU</text>
+<text y="192">vvnxrnurvzuvnnzzzzOQCXf\1i!&lt;,&lt;+?J/U\xOkWbkohpZ|t\/|\rxnzcnnzuuvznUUC</text>
+<text y="200">crnuxrufvununuxxUXYYCY)mnw\{~uXhZo#aqW&amp;whbhkpq}\(\(\ncrzczvuvzccYUUC</text>
+<text y="208">vczxnxnnvfnurczzccXJULci+XoW*&amp;oBB#$%%#*#ooahkk8W1/t\/t/ntzuXuccczJLY</text>
+<text y="216">vncxznvzuvrYuvYzYzcXck@iI+[rk%8B%%B&amp;ampWo*M##ohko8W&amp;1{1\|\f)vutuuuzXCZC</text>
+<text y="224">cvucvnnvczJXczXxcvnrQ&amp;8_-^:,)|/nzCqk**MMoao**&amp;%&amp;&amp;B(}}(t(\ftnxczzXUJQ</text>
+<text y="232">nuXvxnzvxvvzcYXxurrCp@$l&quot;:&quot;l&gt;{)\tz0OOp0JOwbMM&amp;a#&amp;%%*a*)_|\\fxzcXCLYL</text>
+<text y="240">vxuncvcuvvzzzuvvrvQUh*B?:&quot;:i:l}[/nxnnX}(c0kobbdo8W%dmC0Uzd/tvcXXCLLJ</text>
+<text y="248">vvvzcXzzczYXYYX]-OYYqq%X_&quot;!&lt;;&gt;l&lt;+~}1\|{)YkkLCOOMW8%kZQYZ|_\UcdLJJLLC</text>
+<text y="256">zXvuzvYCXXC\1+1i?QzvX0a8t~&gt;&gt;i_+-{)f(1[[rJkntC%8b&amp;&amp;8*OZ0nt{+[U(f1tMLC</text>
+<text y="264">vurcvvz\|t-]?\l+LXbBB#Ydp|?&gt;i^l--)([&gt;&lt;tCwc}pB%&amp;8o88&amp;qLLJf&amp;gt+??r\|{(bh</text>
+<text y="272">xnfQq#(]~l&lt;/{_&lt;~LBB%%B&amp;*ppX~,;^&lt;_?I&lt;l]ncf[bB888&amp;@&amp;%MbZJJ{\1!&lt;\}r&lt;&gt;d#</text>
+<text y="280">0Mp**_?]&gt;!~~_!&lt;&quot;w8aoQJQvUk8#OU&quot;l}l`'^|]?CmhO&amp;8&amp;&amp;MhULXX\-]{\&quot;:&lt;+n1[qa</text>
+<text y="288">hbkk&lt;l;:&lt;~l_?&gt;~_-ihvftfuxCC#bwM%1&lt;&quot;,l,`*qphO%%WMMo||r}[(&gt;}}-}:()&gt;i&amp;o</text>
+    </g>
+
+    <!-- Badge Label Underneath ASCII Portrait -->
+    <g transform="translate(18, 320)">
+      <rect class="portrait-label-bg" x="0" y="0" width="380" height="32" rx="6" />
+      <text class="portrait-label-text" x="190" y="20">Applied AI Engineer</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Terminal Header &amp; Skills Stack -->
+  <g transform="translate(480, 60)">
+    <!-- Active Prompt Command -->
+    <text x="0" y="20">
+      <tspan class="prompt">guest@marwan-dev</tspan><tspan fill="#1f2328">:</tspan><tspan class="path">~</tspan><tspan fill="#1f2328">$ </tspan><tspan class="cmd">./fetch_stack.sh --full</tspan><rect class="cursor" x="320" y="8" width="7" height="15" />
+    </text>
+
+    <!-- Header Title Block -->
+    <text class="glitch-title" x="0" y="55">Marwan Gamal</text>
+    <text class="subtitle" x="0" y="74">Applied AI Specialist &amp; Research Engineer</text>
+    <line x1="0" y1="85" x2="410" y2="85" stroke="#d0d7de" stroke-width="1.5" />
+
+    <!-- Group 1: Core AI &amp; Deep Learning -->
+    <g transform="translate(0, 105)">
+      <g class="skill-anim-1">
+        <text class="cat-title" x="0" y="0">⚡ Core AI &amp; Deep Learning</text>
+
+        <rect class="badge-bg" x="0" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="27"><tspan class="skill-bullet">›</tspan> PyTorch | TensorFlow</text>
+
+        <rect class="badge-bg" x="205" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="27"><tspan class="skill-bullet">›</tspan> LLM Orchestration</text>
+
+        <rect class="badge-bg" x="0" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="59"><tspan class="skill-bullet">›</tspan> Quantization (GGUF)</text>
+
+        <rect class="badge-bg" x="205" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="59"><tspan class="skill-bullet">›</tspan> LangChain &amp; Agents</text>
+      </g>
+    </g>
+
+    <!-- Group 2: Vision &amp; Speech -->
+    <g transform="translate(0, 205)">
+      <g class="skill-anim-2">
+        <text class="cat-title" x="0" y="0">👁️ Vision &amp; Speech Intelligence</text>
+
+        <rect class="badge-bg" x="0" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="27"><tspan class="skill-bullet">›</tspan> OpenCV | MediaPipe</text>
+
+        <rect class="badge-bg" x="205" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="27"><tspan class="skill-bullet">›</tspan> YOLO Tracking &amp; AR</text>
+
+        <rect class="badge-bg" x="0" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="59"><tspan class="skill-bullet">›</tspan> Automatic Speech (ASR)</text>
+
+        <rect class="badge-bg" x="205" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="59"><tspan class="skill-bullet">›</tspan> Signal Processing</text>
+      </g>
+    </g>
+
+    <!-- Group 3: Deployment &amp; Data Science -->
+    <g transform="translate(0, 305)">
+      <g class="skill-anim-3">
+        <text class="cat-title" x="0" y="0">⚙️ Deployment &amp; Data Engineering</text>
+
+        <rect class="badge-bg" x="0" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="27"><tspan class="skill-bullet">›</tspan> BERTopic &amp; Clustering</text>
+
+        <rect class="badge-bg" x="205" y="10" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="27"><tspan class="skill-bullet">›</tspan> Time-Series Forecasting</text>
+
+        <rect class="badge-bg" x="0" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="10" y="59"><tspan class="skill-bullet">›</tspan> Ollama &amp; Local Inference</text>
+
+        <rect class="badge-bg" x="205" y="42" width="195" height="26" rx="6" />
+        <text class="skill-tag" x="215" y="59"><tspan class="skill-bullet">›</tspan> Python | Embedded C++</text>
+      </g>
+    </g>
+  </g>
+</svg>
